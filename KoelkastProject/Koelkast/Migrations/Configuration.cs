@@ -11,6 +11,7 @@ namespace Koelkast.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            // set Sql generator for MySql database connection
             SetSqlGenerator("MySql.Data.MySqlClient", new MySql.Data.Entity.MySqlMigrationSqlGenerator());
 
         }
