@@ -2,13 +2,22 @@
 
 namespace Koelkast.Models
 {
+    /// <summary>
+    /// Sets up a SQL connection to a SQL server database and creates the defined DbSets as tables
+    /// </summary>
     public class tmDbContext : DbContext
     {
         public DbSet<test> Tests { get; set; }
     }
 
+    /// <summary>
+    /// Sets up a MySQL connection to a database and creates the defined DbSets as tables
+    /// </summary>
     public class MySQL : DbContext
     {
-        public DbSet<test> Tests { get; set; }
+        public DbSet<Ingredient> Ingredients { get; set; }
+        public DbSet<Recipe> Recipes { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Fridge> Fridges { get; set; }
     }
 }
