@@ -7,7 +7,7 @@ namespace Koelkast.Models
     /// </summary>
     public class tmDbContext : DbContext
     {
-        public DbSet<test> Tests { get; set; }
+        //public DbSet<test> Tests { get; set; }
     }
 
     /// <summary>
@@ -15,9 +15,6 @@ namespace Koelkast.Models
     /// </summary>
     public class MySQL : DbContext
     {
-        public DbSet<Ingredient> Ingredients { get; set; }
-        public DbSet<Recipe> Recipes { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Fridge> Fridges { get; set; }
+        // add DbSets here eg. public DbSet<test> Tests { get; set; }
     }
 }
