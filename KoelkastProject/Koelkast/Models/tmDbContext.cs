@@ -13,8 +13,12 @@ namespace Koelkast.Models
     /// <summary>
     /// Sets up a MySQL connection to a database and creates the defined DbSets as tables
     /// </summary>
+   
     public class MySQL : DbContext
     {
-        // add DbSets here eg. public DbSet<test> Tests { get; set; }
+        //add DbSets here eg.
+        public DbSet<User> users { get; set; }
+        public DbSet<Fridge> fridges { get; set; }
+
     }
 }
