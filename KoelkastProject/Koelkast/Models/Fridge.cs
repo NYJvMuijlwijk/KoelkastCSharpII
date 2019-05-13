@@ -5,8 +5,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Koelkast.Models
 {
     // Models returned by MeController actions.
-    public class User
+    public class Fridge
     {
-        public string Hometown { get; set; }
+        [Required]
+        [Key]
+        public int Fridge_Id { get; set; }
     }
 }

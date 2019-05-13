@@ -18,6 +18,7 @@ namespace Koelkast.Models
     {
         //add DbSets here eg.
         public DbSet<User> users { get; set; }
+        public DbSet<Fridge> fridges { get; set; }
 
     }
 }
