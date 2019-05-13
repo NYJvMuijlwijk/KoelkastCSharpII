@@ -514,9 +514,12 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Step.cs" />
+    <Compile Include="Models\Recipe.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Fridge.cs" />
+    <Compile Include="Models\Ingredients.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\MeViewModels.cs" />
     <Compile Include="Models\tmDbContext.cs" />
