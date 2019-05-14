@@ -512,9 +512,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905141149347_CreateModelsFridgeIngredient.cs" />
-    <Compile Include="Migrations\201905141149347_CreateModelsFridgeIngredient.Designer.cs">
-      <DependentUpon>201905141149347_CreateModelsFridgeIngredient.cs</DependentUpon>
+    <Compile Include="Migrations\201905141156514_Initial.cs" />
+    <Compile Include="Migrations\201905141156514_Initial.Designer.cs">
+      <DependentUpon>201905141156514_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -674,8 +674,8 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905141149347_CreateModelsFridgeIngredient.resx">
-      <DependentUpon>201905141149347_CreateModelsFridgeIngredient.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905141156514_Initial.resx">
+      <DependentUpon>201905141156514_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

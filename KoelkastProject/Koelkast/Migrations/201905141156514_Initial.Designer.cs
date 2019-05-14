@@ -7,13 +7,13 @@ namespace Koelkast.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class CreateModelsFridgeIngredient : IMigrationMetadata
+    public sealed partial class Initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateModelsFridgeIngredient));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201905141149347_CreateModelsFridgeIngredient"; }
+            get { return "201905141156514_Initial"; }
         }
         
         string IMigrationMetadata.Source
