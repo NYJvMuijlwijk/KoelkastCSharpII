@@ -23,6 +23,6 @@ namespace Koelkast.Models
         public DbSet<Fridge> fridge { get; set; }
         public DbSet<Step> step { get; set; }
         public DbSet<Recipe> recipe { get; set; }
-        public DbSet<Fridge_Ingredient> fridgeiIngredients { get; set; }
+        public DbSet<Fridge_Ingredient> fridge_ingredients { get; set; }
     }
 }
