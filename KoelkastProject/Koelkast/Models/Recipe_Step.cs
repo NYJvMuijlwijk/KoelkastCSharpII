@@ -10,10 +10,5 @@ namespace Koelkast.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        public string Title { get; set; }
-
-        [Required]
-        public string Step_description { get; set; }
     }
 }
