@@ -9,7 +9,7 @@ namespace Koelkast.Models
     {
         [Required]
         [Key]
-        public int User_Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public String E_mail { get; set; }
@@ -17,6 +17,6 @@ namespace Koelkast.Models
         [Required]
         public String Password { get; set; }
 
-        public virtual ICollection<Fridge> Fridge { get; set; }
+        public virtual ICollection<Fridge> Fridges { get; set; }
     }
 }

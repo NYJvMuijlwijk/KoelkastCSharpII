@@ -17,12 +17,11 @@ namespace Koelkast.Models
     public class MySQL : DbContext
     {
         //add DbSets here eg.
-        public DbSet<User> users { get; set; }
-        public DbSet<Ingredient> ingredient { get; set; }
-
-        public DbSet<Fridge> fridge { get; set; }
-        public DbSet<Step> step { get; set; }
-        public DbSet<Recipe> recipe { get; set; }
-        public DbSet<Fridge_Ingredient> fridge_ingredients { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Ingredient> Ingredients { get; set; }
+        public DbSet<Fridge> Fridges { get; set; }
+        public DbSet<Step> Steps { get; set; }
+        public DbSet<Recipe> Recipes { get; set; }
+        public DbSet<Fridge_Ingredient> Fridge_Ingredients { get; set; }
     }
 }

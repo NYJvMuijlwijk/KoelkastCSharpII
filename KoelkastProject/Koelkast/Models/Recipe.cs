@@ -17,9 +17,9 @@ namespace Koelkast.Models
         [Required]
         public string Name { get; set; }
 
-        public virtual ICollection<Ingredient> Recipe_Has_Ingredients { get; set; }
+        public virtual ICollection<Ingredient> Recipe_Ingredients { get; set; }
 
-        public virtual ICollection<Step> Recipe_Has_Steps { get; set; }
+        public virtual ICollection<Step> Recipe_Steps { get; set; }
 
     }
 }
