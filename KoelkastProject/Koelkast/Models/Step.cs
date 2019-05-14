@@ -9,7 +9,7 @@ namespace Koelkast.Models
     {
         [Required]
         [Key]
-        public int Step_Id { get; set; }
+        public int Id { get; set; }
 
      
         [Required]

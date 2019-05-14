@@ -9,17 +9,16 @@ namespace Koelkast.Models
     {
         [Required]
         [Key]
-        public int UserIngredients_Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public String Name { get; set; }
-
-        public int Amount { get; set; }
         
         [Required]
         public String Unit_Of_Measure { get; set; }
 
-        
-   
+        public virtual ICollection<Fridge_Ingredient> Fridge_Ingredients { get; set; }
+
+
     }
 }

@@ -9,7 +9,7 @@ namespace Koelkast.Models
     {
         [Required]
         [Key]
-        public int Recipe_Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public int Time { get; set; }
@@ -19,7 +19,7 @@ namespace Koelkast.Models
 
         public virtual ICollection<Ingredients> Recipe_Has_Ingredients { get; set; }
 
-        public virtual ICollection<Ingredients> Recipe_Has_Steps { get; set; }
+        public virtual ICollection<Step> Recipe_Has_Steps { get; set; }
 
     }
 }

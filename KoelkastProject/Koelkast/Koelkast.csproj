@@ -514,6 +514,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Fridge_Ingredient.cs" />
     <Compile Include="Models\Step.cs" />
     <Compile Include="Models\Recipe.cs" />
     <Compile Include="Models\IdentityModels.cs" />

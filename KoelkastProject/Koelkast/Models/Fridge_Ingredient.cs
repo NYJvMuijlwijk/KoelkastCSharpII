@@ -5,11 +5,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Koelkast.Models
 {
     // Models returned by MeController actions.
-    public class Fridge
+    public class Fridge_Ingredient
     {
+
         [Required]
-        [Key]
-        public int Id { get; set; }
-        public virtual ICollection<Fridge_Ingredient> Fridge_Ingredients { get; set; }
+        public int Amount { get; set; }
     }
 }
