@@ -18,11 +18,11 @@ namespace Koelkast.Models
     {
         //add DbSets here eg.
         public DbSet<User> users { get; set; }
-        public DbSet<Ingredients> ingredient { get; set; }
+        public DbSet<Ingredient> ingredient { get; set; }
 
         public DbSet<Fridge> fridge { get; set; }
         public DbSet<Step> step { get; set; }
         public DbSet<Recipe> recipe { get; set; }
-
+        public DbSet<Fridge_Ingredient> fridgeiIngredients { get; set; }
     }
 }
