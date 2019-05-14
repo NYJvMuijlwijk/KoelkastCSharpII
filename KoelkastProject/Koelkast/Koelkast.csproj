@@ -520,7 +520,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Fridge.cs" />
-    <Compile Include="Models\Ingredients.cs" />
+    <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\MeViewModels.cs" />
     <Compile Include="Models\tmDbContext.cs" />

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Koelkast.Models
 {
     // Models returned by MeController actions.
-    public class Ingredients
+    public class Ingredient
     {
         [Required]
         [Key]
