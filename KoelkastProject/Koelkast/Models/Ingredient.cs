@@ -18,6 +18,7 @@ namespace Koelkast.Models
         public String Unit_Of_Measure { get; set; }
 
         public virtual ICollection<Fridge_Ingredient> Fridge_Ingredients { get; set; }
+        public virtual ICollection<Recipe_Ingredient> Recipe_Ingredients { get; set; }
 
 
     }
