@@ -507,10 +507,14 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FridgesController.cs" />
+    <Compile Include="Controllers\Fridge_Ingredient_AmountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IngredientsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MeController.cs" />
+    <Compile Include="Controllers\RecipesController.cs" />
+    <Compile Include="Controllers\Recipe_Ingredient_AmountController.cs" />
+    <Compile Include="Controllers\StepsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -675,6 +679,26 @@
     <Content Include="Views\Ingredients\Details.cshtml" />
     <Content Include="Views\Ingredients\Edit.cshtml" />
     <Content Include="Views\Ingredients\Index.cshtml" />
+    <Content Include="Views\Fridge_Ingredient_Amount\Create.cshtml" />
+    <Content Include="Views\Fridge_Ingredient_Amount\Delete.cshtml" />
+    <Content Include="Views\Fridge_Ingredient_Amount\Details.cshtml" />
+    <Content Include="Views\Fridge_Ingredient_Amount\Edit.cshtml" />
+    <Content Include="Views\Fridge_Ingredient_Amount\Index.cshtml" />
+    <Content Include="Views\Recipes\Create.cshtml" />
+    <Content Include="Views\Recipes\Delete.cshtml" />
+    <Content Include="Views\Recipes\Details.cshtml" />
+    <Content Include="Views\Recipes\Edit.cshtml" />
+    <Content Include="Views\Recipes\Index.cshtml" />
+    <Content Include="Views\Recipe_Ingredient_Amount\Create.cshtml" />
+    <Content Include="Views\Recipe_Ingredient_Amount\Delete.cshtml" />
+    <Content Include="Views\Recipe_Ingredient_Amount\Details.cshtml" />
+    <Content Include="Views\Recipe_Ingredient_Amount\Edit.cshtml" />
+    <Content Include="Views\Recipe_Ingredient_Amount\Index.cshtml" />
+    <Content Include="Views\Steps\Create.cshtml" />
+    <Content Include="Views\Steps\Delete.cshtml" />
+    <Content Include="Views\Steps\Details.cshtml" />
+    <Content Include="Views\Steps\Edit.cshtml" />
+    <Content Include="Views\Steps\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
