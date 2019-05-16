@@ -7,6 +7,8 @@ namespace Koelkast.Models
     // Models returned by MeController actions.
     public class Fridge_Ingredient_Amount
     {
+        [Key]
+        public int Id { get; set; }
         [Required]
         public int Amount { get; set; }
 
