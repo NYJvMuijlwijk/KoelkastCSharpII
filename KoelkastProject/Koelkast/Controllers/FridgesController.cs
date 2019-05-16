@@ -47,16 +47,18 @@ namespace Koelkast.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id")] Fridge fridge)
+        public async Task Create([Bind(Include = "Id, User_Id")] User user)
         {
-            if (ModelState.IsValid)
-            {
-                db.Fridges.Add(fridge);
-                await db.SaveChangesAsync();
-                return RedirectToAction("Index");
-            }
+//            if (ModelState.IsValid)
+//            {
+//                db.Fridges.Add(fridge);
+//                await db.SaveChangesAsync();
+//                return RedirectToAction("Index");
+//            }
 
-            return View(fridge);
+            var fridge = new Fridge {User_Id = user.Id};
+            db.Fridges.Add(fridge);
+            await db.SaveChangesAsync();
         }
 
         // GET: Fridges/Edit/5
