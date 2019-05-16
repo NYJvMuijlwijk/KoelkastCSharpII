@@ -13,7 +13,7 @@ namespace Koelkast.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201905141254111_Initial"; }
+            get { return "201905161419279_Initial"; }
         }
         
         string IMigrationMetadata.Source

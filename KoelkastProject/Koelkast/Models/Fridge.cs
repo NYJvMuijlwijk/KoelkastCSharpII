@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Koelkast.Models
 {
@@ -10,7 +12,10 @@ namespace Koelkast.Models
         [Required]
         [Key]
         public int Id { get; set; }
-        public int User_Id { get; set; }
-        public virtual ICollection<Fridge_Ingredient> Fridge_Ingredients { get; set; }
+
+        [Required]
+        public virtual User User { get; set; }
+
+        public List<Fridge_Ingredient_Amount> Ingredients { get; set; }
     }
 }

@@ -26,12 +26,21 @@ namespace Koelkast.Migrations
                 "dbo.Fridges",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
-                        User_Id = c.Int(),
+                        Id = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Users", t => t.User_Id)
-                .Index(t => t.User_Id);
+                .ForeignKey("dbo.Users", t => t.Id)
+                .Index(t => t.Id);
+            
+            CreateTable(
+                "dbo.Users",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        E_mail = c.String(nullable: false, unicode: false),
+                        Password = c.String(nullable: false, unicode: false),
+                    })
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Ingredients",
@@ -92,40 +101,30 @@ namespace Koelkast.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
-            CreateTable(
-                "dbo.Users",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        E_mail = c.String(nullable: false, unicode: false),
-                        Password = c.String(nullable: false, unicode: false),
-                    })
-                .PrimaryKey(t => t.Id);
-            
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Fridges", "User_Id", "dbo.Users");
             DropForeignKey("dbo.Recipe_Step", "Step_Id", "dbo.Steps");
             DropForeignKey("dbo.Recipe_Step", "Recipe_Id", "dbo.Recipes");
             DropForeignKey("dbo.Recipe_Ingredient", "Recipe_Id", "dbo.Recipes");
             DropForeignKey("dbo.Recipe_Ingredient", "Ingredient_Id", "dbo.Ingredients");
             DropForeignKey("dbo.Fridge_Ingredient", "Ingredient_Id", "dbo.Ingredients");
+            DropForeignKey("dbo.Fridges", "Id", "dbo.Users");
             DropForeignKey("dbo.Fridge_Ingredient", "Fridge_Id", "dbo.Fridges");
             DropIndex("dbo.Recipe_Step", new[] { "Step_Id" });
             DropIndex("dbo.Recipe_Step", new[] { "Recipe_Id" });
             DropIndex("dbo.Recipe_Ingredient", new[] { "Recipe_Id" });
             DropIndex("dbo.Recipe_Ingredient", new[] { "Ingredient_Id" });
-            DropIndex("dbo.Fridges", new[] { "User_Id" });
+            DropIndex("dbo.Fridges", new[] { "Id" });
             DropIndex("dbo.Fridge_Ingredient", new[] { "Ingredient_Id" });
             DropIndex("dbo.Fridge_Ingredient", new[] { "Fridge_Id" });
-            DropTable("dbo.Users");
             DropTable("dbo.Steps");
             DropTable("dbo.Recipes");
             DropTable("dbo.Recipe_Step");
             DropTable("dbo.Recipe_Ingredient");
             DropTable("dbo.Ingredients");
+            DropTable("dbo.Users");
             DropTable("dbo.Fridges");
             DropTable("dbo.Fridge_Ingredient");
         }
