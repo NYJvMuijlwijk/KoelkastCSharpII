@@ -16,6 +16,5 @@ namespace Koelkast.Models
         public Recipe Recipe { get; set; }
         [Required]
         public Ingredient Ingredient { get; set; }
-        
     }
 }
