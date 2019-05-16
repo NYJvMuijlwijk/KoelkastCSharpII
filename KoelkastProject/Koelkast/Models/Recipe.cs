@@ -14,6 +14,7 @@ namespace Koelkast.Models
         public int Time { get; set; }
         [Required]
         public string Name { get; set; }
+        public string Description { get; set; }
 
         [Required]
         public List<Recipe_Ingredient_Amount> Ingredients { get; set; }
