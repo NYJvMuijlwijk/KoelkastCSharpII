@@ -10,6 +10,7 @@ namespace Koelkast.Models
         [Required]
         [Key]
         public int Id { get; set; }
+        public int User_Id { get; set; }
         public virtual ICollection<Fridge_Ingredient> Fridge_Ingredients { get; set; }
     }
 }
