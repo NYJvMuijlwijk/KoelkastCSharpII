@@ -514,9 +514,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905161419279_Initial.cs" />
-    <Compile Include="Migrations\201905161419279_Initial.Designer.cs">
-      <DependentUpon>201905161419279_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201905161628519_Initial.cs" />
+    <Compile Include="Migrations\201905161628519_Initial.Designer.cs">
+      <DependentUpon>201905161628519_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905161631500_RecipeDescription.cs" />
+    <Compile Include="Migrations\201905161631500_RecipeDescription.Designer.cs">
+      <DependentUpon>201905161631500_RecipeDescription.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -687,8 +691,11 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905161419279_Initial.resx">
-      <DependentUpon>201905161419279_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905161628519_Initial.resx">
+      <DependentUpon>201905161628519_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905161631500_RecipeDescription.resx">
+      <DependentUpon>201905161631500_RecipeDescription.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
