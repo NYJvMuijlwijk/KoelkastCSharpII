@@ -56,7 +56,7 @@ namespace Koelkast.Controllers
 //                return RedirectToAction("Index");
 //            }
 
-            var fridge = new Fridge {User_Id = user.Id};
+            var fridge = new Fridge {User = user};
             db.Fridges.Add(fridge);
             await db.SaveChangesAsync();
         }
