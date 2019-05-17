@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Koelkast.Models
@@ -10,13 +9,12 @@ namespace Koelkast.Models
         [Required]
         [Key]
         public int Id { get; set; }
-
         [Required]
-        public String E_mail { get; set; }
-
+        public string E_mail { get; set; }
         [Required]
-        public String Password { get; set; }
+        public string Password { get; set; }
 
-        public virtual ICollection<Fridge> Fridges { get; set; }
+        public List<Fridge> Fridges { get; set; }
+        public List<Recipe> Recipes { get; set; }
     }
 }
