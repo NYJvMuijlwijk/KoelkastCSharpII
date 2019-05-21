@@ -2,66 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Voerum</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <!-- Bootstrap core CSS -->
+    <link href="/Template/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/Template/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="/Template/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="/Template/css/freelancer.min.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+    <!--Navbar-->
+<nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
     <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand js-scroll-trigger" href="/Web/index">Voerum</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
         </button>
-        <a class="navbar-brand" href="/">Application name</a>
-        <div class="navbar-collapse collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/Home/About" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="/Home/Contact" class="nav-link">Contact</a></li>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+               <br />
             </ul>
-
-            <ul class="nav navbar-nav navbar-right mr-auto">
-                <li class="nav-item"><a href="/Account/Register" id="registerLink" class="nav-link">Register</a></li>
-                <li class="nav-item"><a href="/Account/Login" id="loginLink" class="nav-link">Log in</a></li>
-            </ul>
+          
+            <div class="text-align: right">
+                @Html.Partial("_LoginPartial")
+            </div>
 
         </div>
     </div>
 </nav>
 
-
-@*<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>
-            </ul>
-            @Html.Partial("_LoginPartial")
-        </div>
-    </div>
-</div>*@
 <div class="container body-content">
     @RenderBody()
     @RenderSection("SPAViews", required: false)
     <hr/>
-    <footer>
-        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    
+        <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Locatie</h4>
+                    <p class="lead mb-0">
+                        Windesheim Flevoland
+                            
+                    </p>
+                </div>
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <br/>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-uppercase mb-4">Contact</h4>
+                    <p class="lead mb-0">
+                           
+                        <a href="mailto:admin@admin.nl">Contact Admin</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="copyright py-4 text-center text-white">
+            <div class="container">
+                <small>Copyright &copy; Windesheimvoerum 2019</small>
+            </div>
+        </div>
     </footer>
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="/Template/vendor/jquery/jquery.min.js"></script>
+    <script src="/Template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/Template/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/Template/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="/Template/js/jqBootstrapValidation.js"></script>
+    <script src="Template/js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/Template/js/freelancer.min.js"></script>
 </div>
 
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
 @RenderSection("Scripts", required: false)
 </body>
+
+
 
 </html>
