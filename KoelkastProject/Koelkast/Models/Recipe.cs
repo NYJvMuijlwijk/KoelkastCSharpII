@@ -10,16 +10,17 @@ namespace Koelkast.Models
         [Required]
         [Key]
         public int Id { get; set; }
-
         [Required]
         public int Time { get; set; }
-
         [Required]
         public string Name { get; set; }
+        public string Description { get; set; }
 
-        public virtual ICollection<Recipe_Ingredient> Recipe_Ingredients { get; set; }
-
-        public virtual ICollection<Recipe_Step> Recipe_Steps { get; set; }
-
+        [Required]
+        public List<Recipe_Ingredient_Amount> Ingredients { get; set; }
+        [Required]
+        public List<Step> Steps { get; set; }
+        [Required]
+        public User User { get; set; }
     }
 }

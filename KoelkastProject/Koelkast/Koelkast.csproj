@@ -506,24 +506,30 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\fridgeController.cs" />
+    <Compile Include="Controllers\FridgesController.cs" />
+    <Compile Include="Controllers\Fridge_Ingredient_AmountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngredientsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\MeController.cs" />
-    <Compile Include="Controllers\recipeController.cs" />
     <Compile Include="Controllers\WebController.cs" />
+    <Compile Include="Controllers\RecipesController.cs" />
+    <Compile Include="Controllers\Recipe_Ingredient_AmountController.cs" />
+    <Compile Include="Controllers\StepsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201905141209006_Initial.cs" />
-    <Compile Include="Migrations\201905141209006_Initial.Designer.cs">
-      <DependentUpon>201905141209006_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201905161628519_Initial.cs" />
+    <Compile Include="Migrations\201905161628519_Initial.Designer.cs">
+      <DependentUpon>201905161628519_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905161631500_RecipeDescription.cs" />
+    <Compile Include="Migrations\201905161631500_RecipeDescription.Designer.cs">
+      <DependentUpon>201905161631500_RecipeDescription.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Recipe_Step.cs" />
-    <Compile Include="Models\Recipe_Ingredient.cs" />
-    <Compile Include="Models\Fridge_Ingredient.cs" />
+    <Compile Include="Models\Recipe_Ingredient_Amount.cs" />
+    <Compile Include="Models\Fridge_Ingredient_Amount.cs" />
     <Compile Include="Models\Step.cs" />
     <Compile Include="Models\Recipe.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -532,7 +538,7 @@
     <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\MeViewModels.cs" />
-    <Compile Include="Models\tmDbContext.cs" />
+    <Compile Include="Models\DatabaseConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -2315,8 +2321,36 @@
     <Content Include="Template\vendor\jquery\jquery.min.map" />
     <Content Include="Template\vendor\jquery\jquery.slim.min.map" />
     <Content Include="Views\Web\_Home.cshtml" />
-    <Content Include="Views\Home\Recipe.cshtml" />
-    <Content Include="Views\Home\fridge.cshtml" />
+    <Content Include="Views\Fridges\Create.cshtml" />
+    <Content Include="Views\Fridges\Delete.cshtml" />
+    <Content Include="Views\Fridges\Details.cshtml" />
+    <Content Include="Views\Fridges\Edit.cshtml" />
+    <Content Include="Views\Fridges\Index.cshtml" />
+    <Content Include="Views\Ingredients\Create.cshtml" />
+    <Content Include="Views\Ingredients\Delete.cshtml" />
+    <Content Include="Views\Ingredients\Details.cshtml" />
+    <Content Include="Views\Ingredients\Edit.cshtml" />
+    <Content Include="Views\Ingredients\Index.cshtml" />
+    <Content Include="Views\Fridge_Ingredient_Amount\Create.cshtml" />
+    <Content Include="Views\Fridge_Ingredient_Amount\Delete.cshtml" />
+    <Content Include="Views\Fridge_Ingredient_Amount\Details.cshtml" />
+    <Content Include="Views\Fridge_Ingredient_Amount\Edit.cshtml" />
+    <Content Include="Views\Fridge_Ingredient_Amount\Index.cshtml" />
+    <Content Include="Views\Recipes\Create.cshtml" />
+    <Content Include="Views\Recipes\Delete.cshtml" />
+    <Content Include="Views\Recipes\Details.cshtml" />
+    <Content Include="Views\Recipes\Edit.cshtml" />
+    <Content Include="Views\Recipes\Index.cshtml" />
+    <Content Include="Views\Recipe_Ingredient_Amount\Create.cshtml" />
+    <Content Include="Views\Recipe_Ingredient_Amount\Delete.cshtml" />
+    <Content Include="Views\Recipe_Ingredient_Amount\Details.cshtml" />
+    <Content Include="Views\Recipe_Ingredient_Amount\Edit.cshtml" />
+    <Content Include="Views\Recipe_Ingredient_Amount\Index.cshtml" />
+    <Content Include="Views\Steps\Create.cshtml" />
+    <Content Include="Views\Steps\Delete.cshtml" />
+    <Content Include="Views\Steps\Details.cshtml" />
+    <Content Include="Views\Steps\Edit.cshtml" />
+    <Content Include="Views\Steps\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2336,8 +2370,11 @@
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905141209006_Initial.resx">
-      <DependentUpon>201905141209006_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905161628519_Initial.resx">
+      <DependentUpon>201905161628519_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905161631500_RecipeDescription.resx">
+      <DependentUpon>201905161631500_RecipeDescription.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

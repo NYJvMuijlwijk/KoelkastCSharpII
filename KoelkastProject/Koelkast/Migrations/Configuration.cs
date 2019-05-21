@@ -4,16 +4,16 @@ namespace Koelkast.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using MySql.Data.MySqlClient;
+    using MySql.Data.Entity;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Koelkast.Models.MySQL>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            // set Sql generator for MySql database connection
-            SetSqlGenerator("MySql.Data.MySqlClient", new MySql.Data.Entity.MySqlMigrationSqlGenerator());
 
+            // set Sql generator for MySql database connection
+            SetSqlGenerator("MySql.Data.MySqlClient", new MySqlMigrationSqlGenerator());
         }
 
         protected override void Seed(Koelkast.Models.MySQL context)
