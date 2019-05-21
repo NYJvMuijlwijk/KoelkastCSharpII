@@ -506,9 +506,11 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\fridgeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MeController.cs" />
+    <Compile Include="Controllers\recipeController.cs" />
     <Compile Include="Controllers\WebController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -616,12 +618,6 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Template\css\freelancer.css" />
     <Content Include="Template\css\freelancer.min.css" />
-    <Content Include="Template\img\portfolio\cabin.png" />
-    <Content Include="Template\img\portfolio\cake.png" />
-    <Content Include="Template\img\portfolio\circus.png" />
-    <Content Include="Template\img\portfolio\game.png" />
-    <Content Include="Template\img\portfolio\safe.png" />
-    <Content Include="Template\img\portfolio\submarine.png" />
     <Content Include="Template\img\profile.png" />
     <Content Include="Template\js\contact_me.js" />
     <Content Include="Template\js\contact_me.min.js" />
@@ -2320,9 +2316,13 @@
     <Content Include="Template\vendor\jquery\jquery.slim.min.map" />
     <Content Include="Views\Web\_Home.cshtml" />
     <Content Include="Views\Home\Recipe.cshtml" />
+    <Content Include="Views\Home\fridge.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Template\img\portfolio\" />
+    <Folder Include="Views\fridge\" />
+    <Folder Include="Views\recipe\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
