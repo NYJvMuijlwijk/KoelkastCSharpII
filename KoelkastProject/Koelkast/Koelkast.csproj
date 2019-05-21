@@ -2319,6 +2319,7 @@
     <Content Include="Template\vendor\jquery\jquery.min.map" />
     <Content Include="Template\vendor\jquery\jquery.slim.min.map" />
     <Content Include="Views\Web\_Home.cshtml" />
+    <Content Include="Views\Home\Recipe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
